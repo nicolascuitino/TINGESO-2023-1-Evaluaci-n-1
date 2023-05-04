@@ -15,6 +15,11 @@
 	<description>Evaluación 1 TINGESO 2023-1</description>
 	<properties>
 		<java.version>17</java.version>
+		<sonar.exclusions>
+			src/main/java/com/tingeso/eval1/entities/*,
+			src/main/java/com/tingeso/eval1/repositories/*,
+			src/main/java/com/tingeso/eval1/controllers/*
+		</sonar.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>

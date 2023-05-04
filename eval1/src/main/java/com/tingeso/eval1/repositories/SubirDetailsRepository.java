@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SubirDetailsRepository extends JpaRepository<SubirDetailsEntity,Integer> {
+
+    SubirDetailsEntity findByProveedor(String proveedor);
 }

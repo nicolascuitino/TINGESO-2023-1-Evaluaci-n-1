@@ -96,6 +96,13 @@ public class SubirDataService {
          newData.setTurno(turno);
          newData.setProveedor(proveedor);
          newData.setKls_leche(kls_leche);
+         String[] dateSplit = fecha.split("/");
+         if(Integer.parseInt(dateSplit[2]) > 15){
+             newData.setQuincena(dateSplit[0] + "/" + dateSplit[1] + "/" + "2");
+         }
+         else{
+             newData.setQuincena(dateSplit[0] + "/" + dateSplit[1] + "/" + "1");
+         }
          guardarData(newData);
     }
     public void eliminarData(ArrayList<SubirDataEntity> datas){

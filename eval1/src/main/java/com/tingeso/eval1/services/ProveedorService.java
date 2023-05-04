@@ -43,4 +43,6 @@ public class ProveedorService {
         }
     }
 
+    public ProveedorEntity encontrarCodigo(String codigo){return proveedorRepository.findByCodigo(codigo);}
+
 }

@@ -2,6 +2,7 @@ package com.tingeso.eval1.services;
 
 import com.tingeso.eval1.entities.SubirDataEntity;
 import com.tingeso.eval1.entities.SubirDetailsEntity;
+import com.tingeso.eval1.repositories.SubirDataRepository;
 import com.tingeso.eval1.repositories.SubirDetailsRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,9 @@ import java.util.ArrayList;
 public class SubirDetailsService {
     @Autowired
     SubirDetailsRepository subirDetailsRepository;
+
+    @Autowired
+    SubirDataRepository subirDataRepository;
 
     private final Logger logg = LoggerFactory.getLogger(SubirDataService.class);
 
@@ -95,5 +99,7 @@ public class SubirDetailsService {
     public void eliminarDetails(ArrayList<SubirDetailsEntity> details){
         subirDetailsRepository.deleteAll(details);
     }
+
+    public SubirDetailsEntity obtenerPorProveedor(String proveedor){ return subirDetailsRepository.findByProveedor(proveedor);}
 
 }
