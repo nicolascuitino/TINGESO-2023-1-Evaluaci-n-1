@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  postgresql-db:
+    image: postgres:12
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: EVALUACION1-TINGESO
+
+    ports:
+      - "5432:5432"
+
+  app:
+    container_name: proyecto_tingeso
+    image: nicolascuitino4/proyecto_tingeso
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql-db:5432/EVALUACION1-TINGESO?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1234
+    deploy:
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - postgresql-db

@@ -1,9 +1,9 @@
 package com.tingeso.eval1.services;
 
-import com.tingeso.eval1.entities.SubirDataEntity;
 import com.tingeso.eval1.entities.SubirDetailsEntity;
 import com.tingeso.eval1.repositories.SubirDataRepository;
 import com.tingeso.eval1.repositories.SubirDetailsRepository;
+import lombok.Generated;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +32,7 @@ public class SubirDetailsService {
         return (ArrayList<SubirDetailsEntity>) subirDetailsRepository.findAll();
     }
 
+    @Generated
     public String guardar(MultipartFile file){
         String filename = file.getOriginalFilename();
         if(filename != null){
@@ -53,6 +54,7 @@ public class SubirDetailsService {
         }
     }
 
+    @Generated
     public void leerCsv(String direccion){
         String texto = "";
         BufferedReader bf = null;
@@ -101,5 +103,7 @@ public class SubirDetailsService {
     }
 
     public SubirDetailsEntity obtenerPorProveedor(String proveedor){ return subirDetailsRepository.findByProveedor(proveedor);}
+
+    public void borrarTodos(){subirDetailsRepository.deleteAll();}
 
 }

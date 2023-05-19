@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProveedorService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">eval1</a> &gt; <a href="index.source.html" class="el_package">com.tingeso.eval1.services</a> &gt; <span class="el_source">ProveedorService.java</span></div><h1>ProveedorService.java</h1><pre class="source lang-java linenums">package com.tingeso.eval1.services;
+
+import com.tingeso.eval1.entities.ProveedorEntity;
+import com.tingeso.eval1.repositories.ProveedorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L12">public class ProveedorService {</span>
+    @Autowired
+    ProveedorRepository proveedorRepository;
+
+    public ArrayList&lt;ProveedorEntity&gt; obtenerProveedores(){
+<span class="fc" id="L17">        return (ArrayList&lt;ProveedorEntity&gt;) proveedorRepository.findAll();</span>
+    }
+
+    public ProveedorEntity guardarProveedor(ProveedorEntity newProveedor){
+<span class="fc" id="L21">        return proveedorRepository.save(newProveedor);</span>
+    }
+
+    public void guardarProveedorArg(String codigo, String nombre, String categoria, String retencion){
+<span class="fc" id="L25">        ProveedorEntity proveedor = new ProveedorEntity();</span>
+<span class="fc" id="L26">        proveedor.setCodigo(codigo);</span>
+<span class="fc" id="L27">        proveedor.setNombre(nombre);</span>
+<span class="fc" id="L28">        proveedor.setCategoria(categoria);</span>
+<span class="fc" id="L29">        proveedor.setRetencion(retencion);</span>
+<span class="fc" id="L30">        proveedorRepository.save(proveedor);</span>
+<span class="fc" id="L31">    }</span>
+
+    public Optional&lt;ProveedorEntity&gt; obtenerPorCodigo(Integer codigo){
+<span class="nc" id="L34">        return proveedorRepository.findById(codigo);</span>
+    }
+
+    public boolean eliminarProveedor(Integer codigo) {
+        try{
+<span class="nc" id="L39">            proveedorRepository.deleteById(codigo);</span>
+<span class="nc" id="L40">            return true;</span>
+<span class="nc" id="L41">        }catch(Exception err){</span>
+<span class="nc" id="L42">            return false;</span>
+        }
+    }
+
+<span class="nc" id="L46">    public ProveedorEntity encontrarCodigo(String codigo){return proveedorRepository.findByCodigo(codigo);}</span>
+
+<span class="fc" id="L48">    public void borrarTodos(){proveedorRepository.deleteAll();}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

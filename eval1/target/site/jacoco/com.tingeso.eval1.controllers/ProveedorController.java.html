@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProveedorController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">eval1</a> &gt; <a href="index.source.html" class="el_package">com.tingeso.eval1.controllers</a> &gt; <span class="el_source">ProveedorController.java</span></div><h1>ProveedorController.java</h1><pre class="source lang-java linenums">package com.tingeso.eval1.controllers;
+
+import com.tingeso.eval1.entities.ProveedorEntity;
+import com.tingeso.eval1.services.ProveedorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Controller
+@RequestMapping
+<span class="fc" id="L15">public class ProveedorController {</span>
+    @Autowired
+    ProveedorService proveedorService;
+
+    @GetMapping(&quot;/listar&quot;)
+    public String listar(Model model) {
+<span class="nc" id="L21">        ArrayList&lt;ProveedorEntity&gt; proveedores=proveedorService.obtenerProveedores();</span>
+<span class="nc" id="L22">        model.addAttribute(&quot;proveedores&quot;,proveedores);</span>
+<span class="nc" id="L23">        return &quot;index&quot;;</span>
+    }
+
+    @GetMapping(&quot;/new-proveedor&quot;)
+    public String newProveedor(Model model){
+<span class="nc" id="L28">        ProveedorEntity proveedor = new ProveedorEntity();</span>
+<span class="nc" id="L29">        model.addAttribute(&quot;newProveedor&quot;, proveedor);</span>
+<span class="nc" id="L30">        return &quot;new-proveedor&quot;;</span>
+    }
+
+    /*@PostMapping(&quot;/new-proveedor&quot;)
+    public String saveProveedor(@RequestBody ProveedorEntity proveedor){
+        proveedorService.guardarProveedor(proveedor);
+        return &quot;redirect:/listar&quot;;
+    }*/
+    @PostMapping(&quot;/new-proveedor&quot;)
+    public String saveProveedor(@RequestParam(&quot;codigo&quot;) String codigo,
+                                 @RequestParam(&quot;nombre&quot;) String nombre,
+                                 @RequestParam(&quot;categoria&quot;) String categoria,
+                                 @RequestParam(&quot;retencion&quot;) String retencion){
+<span class="nc" id="L43">        proveedorService.guardarProveedorArg(codigo, nombre, categoria, retencion);</span>
+<span class="nc" id="L44">        return &quot;redirect:/listar&quot;;</span>
+    }
+
+    @PostMapping(&quot;/proveedores/post&quot;)
+    public String crearProveedor(@RequestBody ProveedorEntity proveedor){
+
+<span class="nc" id="L50">        proveedorService.guardarProveedor(proveedor);</span>
+<span class="nc" id="L51">        return &quot;Proveedor creado&quot;;</span>
+    }
+
+    @GetMapping(&quot;/getall&quot;)
+    public List&lt;ProveedorEntity&gt; getAll(){
+<span class="nc" id="L56">        return proveedorService.obtenerProveedores();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

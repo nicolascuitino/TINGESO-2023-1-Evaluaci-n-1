@@ -105,7 +105,7 @@ public class SubirDataService {
          }
          guardarData(newData);
     }
-    public void eliminarData(ArrayList<SubirDataEntity> datas){
-        dataRepository.deleteAll(datas);
+    public void eliminarData(){
+        dataRepository.deleteAll();
     }
 }

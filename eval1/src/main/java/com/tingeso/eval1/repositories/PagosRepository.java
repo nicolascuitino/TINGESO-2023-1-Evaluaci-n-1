@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Repository
 public interface PagosRepository extends JpaRepository<PagosEntity, Integer> {
 
-    ArrayList<PagosEntity> findByQuincena(String quincena);
+    PagosEntity findByQuincena(String quincena);
 
     ArrayList<PagosEntity> findByCodigo(String codigo);
 }

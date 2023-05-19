@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PagosController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">eval1</a> &gt; <a href="index.source.html" class="el_package">com.tingeso.eval1.controllers</a> &gt; <span class="el_source">PagosController.java</span></div><h1>PagosController.java</h1><pre class="source lang-java linenums">package com.tingeso.eval1.controllers;
+
+import com.tingeso.eval1.entities.PagosEntity;
+import com.tingeso.eval1.entities.ProveedorEntity;
+import com.tingeso.eval1.entities.SubirDataEntity;
+import com.tingeso.eval1.entities.SubirDetailsEntity;
+import com.tingeso.eval1.services.PagosService;
+import com.tingeso.eval1.services.ProveedorService;
+import com.tingeso.eval1.services.SubirDataService;
+import com.tingeso.eval1.services.SubirDetailsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+
+@Controller
+@RequestMapping
+<span class="fc" id="L22">public class PagosController {</span>
+    @Autowired
+    PagosService pagosService;
+
+    @Autowired
+    SubirDataService subirDataService;
+
+    @Autowired
+    SubirDetailsService subirDetailsService;
+
+    @Autowired
+    ProveedorService proveedorService;
+
+    @GetMapping(&quot;/pagos&quot;)
+    public String listarPagos(Model model) {
+<span class="nc" id="L37">        mostrarPagos();</span>
+<span class="nc" id="L38">        ArrayList&lt;PagosEntity&gt; totalPagos = pagosService.obtenerPagos();</span>
+<span class="nc" id="L39">        model.addAttribute(&quot;pagos&quot;, totalPagos);</span>
+<span class="nc" id="L40">        return &quot;pagos&quot;;</span>
+    }
+
+    //@PostMapping(&quot;/pagos&quot;)
+    public void mostrarPagos(){
+
+<span class="nc" id="L46">        ArrayList&lt;SubirDataEntity&gt; subirData = subirDataService.obtenerData();</span>
+<span class="nc" id="L47">        ArrayList&lt;SubirDetailsEntity&gt; subirDetails = subirDetailsService.obtenerDetails();</span>
+
+<span class="nc" id="L49">        boolean exists = false;</span>
+
+<span class="nc bnc" id="L51" title="All 2 branches missed.">            for(SubirDataEntity j: subirData){</span>
+<span class="nc" id="L52">                ArrayList&lt;PagosEntity&gt; pagos = pagosService.obtenerPagos();</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">                for(PagosEntity k: pagos){</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">                    if(k.getCodigo().equals(j.getProveedor()) &amp;&amp;</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">                            j.getQuincena().equals(k.getQuincena())){</span>
+<span class="nc" id="L56">                        exists = true;</span>
+                    }
+
+<span class="nc" id="L59">                }</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">                if(exists == false){</span>
+<span class="nc" id="L61">                    pagosService.guardarPagoDB(proveedorService.encontrarCodigo(j.getProveedor()),j,subirDetailsService.obtenerPorProveedor(j.getProveedor()));</span>
+                }
+<span class="nc" id="L63">                exists = false;</span>
+<span class="nc" id="L64">            }</span>
+
+
+<span class="nc" id="L67">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

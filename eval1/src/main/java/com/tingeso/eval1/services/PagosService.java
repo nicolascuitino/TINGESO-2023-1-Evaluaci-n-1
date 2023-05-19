@@ -25,6 +25,14 @@ public class PagosService {
         return (ArrayList<PagosEntity>) pagosRepository.findAll();
     }
 
+    public ArrayList<PagosEntity> obtenerByProveedor(String codigo){
+        return (ArrayList<PagosEntity>) pagosRepository.findByCodigo(codigo);
+    }
+
+    public PagosEntity obtenerByQuincena(String quincena){
+        return pagosRepository.findByQuincena(quincena);
+    }
+
     public void guardarPago(PagosEntity pago){ pagosRepository.save(pago);}
 
     public void borrarTodos(){pagosRepository.deleteAll();}
@@ -232,7 +240,7 @@ public class PagosService {
         if(var > 45){
             descuento = 30;
         }
-        return Integer.toString(var);
+        return Integer.toString(descuento);
     }
 
     public String descuentoXGrasa(String variacion){
@@ -247,7 +255,7 @@ public class PagosService {
         if(var > 40){
             descuento = 30;
         }
-        return Integer.toString(var);
+        return Integer.toString(descuento);
     }
 
     public String descuentoXST(String variacion){
@@ -262,7 +270,7 @@ public class PagosService {
         if(var > 35){
             descuento = 45;
         }
-        return Integer.toString(var);
+        return Integer.toString(descuento);
     }
 
     public Integer pagoAcopioLeche(String pagoLeche, String pagoGrasa, String pagoST, String boni){
@@ -283,7 +291,7 @@ public class PagosService {
     public Integer retencion(Integer pagoTotal, String afecto){
         double pago = (double) pagoTotal;
         double retencion = 0;
-        if(afecto.equals("Si")){
+        if(afecto.equals("Si") && pagoTotal > 950000){
             retencion = 0.13 * pago;
         }
         return (int) retencion;
@@ -294,21 +302,26 @@ public class PagosService {
     }
 
     public String quincenaAnterior(String quincena){
-        String[] quincenaSplit = quincena.split("/");
-        if(Integer.parseInt(quincenaSplit[2]) == 2){
-            return quincenaSplit[0] + "/" +quincenaSplit[1] + "/" + "1";
-        }
-        else{
-            if(Integer.parseInt(quincenaSplit[1]) == 1){
-                Integer anio = Integer.parseInt(quincenaSplit[0]);
-                anio = anio - 1;
-                return Integer.toString(anio) + "/" + "12" + "/" + "2";
+        if(!quincena.isEmpty()){
+            String[] quincenaSplit = quincena.split("/");
+            if(Integer.parseInt(quincenaSplit[2]) == 2){
+                return quincenaSplit[0] + "/" +quincenaSplit[1] + "/" + "1";
             }
             else{
-                Integer mes = Integer.parseInt(quincenaSplit[1]);
-                mes = mes - 1;
-                return quincenaSplit[0] + "/" + Integer.toString(mes) + "/" + "2";
+                if(Integer.parseInt(quincenaSplit[1]) == 1){
+                    Integer anio = Integer.parseInt(quincenaSplit[0]);
+                    anio = anio - 1;
+                    return Integer.toString(anio) + "/" + "12" + "/" + "2";
+                }
+                else{
+                    Integer mes = Integer.parseInt(quincenaSplit[1]);
+                    mes = mes - 1;
+                    return quincenaSplit[0] + "/" + Integer.toString(mes) + "/" + "2";
+                }
             }
+        }
+        else{
+            return null;
         }
     }
 

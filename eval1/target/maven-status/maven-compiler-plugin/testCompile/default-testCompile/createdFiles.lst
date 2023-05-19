@@ -1,2 +1,4 @@
 com\tingeso\eval1\Eval1ApplicationTests.class
 com\tingeso\eval1\PagosServiceTest.class
+com\tingeso\eval1\ProveedorServiceTest.class
+com\tingeso\eval1\SubirDataServiceTest.class
