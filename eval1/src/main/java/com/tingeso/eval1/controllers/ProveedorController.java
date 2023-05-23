@@ -30,6 +30,13 @@ public class ProveedorController {
         return "new-proveedor";
     }
 
+    @GetMapping("/proveedor/delete/{id}")
+    public String deleteProveedor(@PathVariable String id){
+        System.out.println("\n " + id);
+        proveedorService.eliminarProveedor(id);
+        return "redirect:/";
+    }
+
     /*@PostMapping("/new-proveedor")
     public String saveProveedor(@RequestBody ProveedorEntity proveedor){
         proveedorService.guardarProveedor(proveedor);

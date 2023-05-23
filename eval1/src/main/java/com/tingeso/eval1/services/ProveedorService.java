@@ -30,11 +30,11 @@ public class ProveedorService {
         proveedorRepository.save(proveedor);
     }
 
-    public Optional<ProveedorEntity> obtenerPorCodigo(Integer codigo){
+    public Optional<ProveedorEntity> obtenerPorCodigo(String codigo){
         return proveedorRepository.findById(codigo);
     }
 
-    public boolean eliminarProveedor(Integer codigo) {
+    public boolean eliminarProveedor(String codigo) {
         try{
             proveedorRepository.deleteById(codigo);
             return true;
