@@ -1,5 +1,16 @@
 version: "3.8"
 services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - app1
+
   postgresql-db:
     image: postgres:12
     restart: always
@@ -13,11 +24,11 @@ services:
     ports:
       - "5432:5432"
 
-  app:
-    container_name: proyecto_tingeso
+  app1:
+    container_name: proyecto_tingeso1
     image: nicolascuitino4/proyecto_tingeso
     ports:
-      - "8090:8090"
+      - "8091:8090"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql-db:5432/EVALUACION1-TINGESO?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
       - SPRING_DATASOURCE_USERNAME=postgres
