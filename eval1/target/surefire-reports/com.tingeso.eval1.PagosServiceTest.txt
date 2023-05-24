@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tingeso.eval1.PagosServiceTest
 -------------------------------------------------------------------------------
-Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.439 s - in com.tingeso.eval1.PagosServiceTest
+Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.666 s - in com.tingeso.eval1.PagosServiceTest

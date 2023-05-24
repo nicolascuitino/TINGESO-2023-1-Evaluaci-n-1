@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tingeso.eval1.Eval1ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.245 s - in com.tingeso.eval1.Eval1ApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.249 s - in com.tingeso.eval1.Eval1ApplicationTests

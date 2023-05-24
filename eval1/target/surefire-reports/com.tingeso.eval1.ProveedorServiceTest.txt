@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tingeso.eval1.ProveedorServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s - in com.tingeso.eval1.ProveedorServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 s - in com.tingeso.eval1.ProveedorServiceTest

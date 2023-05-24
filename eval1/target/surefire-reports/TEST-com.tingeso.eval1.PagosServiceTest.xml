@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tingeso.eval1.PagosServiceTest" time="2.439" tests="48" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tingeso.eval1.PagosServiceTest" time="2.666" tests="48" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sonar.projectName" value="&apos;pep1&apos;"/>
     <property name="java.specification.version" value="17"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\nicol\AppData\Local\Temp\surefire4580421412810341432\surefirebooter6172682375580238677.jar C:\Users\nicol\AppData\Local\Temp\surefire4580421412810341432 2023-05-24T09-58-19_527-jvmRun1 surefire2843045629061890507tmp surefire_07392585960948045629tmp"/>
+    <property name="sun.java.command" value="C:\Users\nicol\AppData\Local\Temp\surefire7454977313762174448\surefirebooter17857426527290190713.jar C:\Users\nicol\AppData\Local\Temp\surefire7454977313762174448 2023-05-24T11-42-32_757-jvmRun1 surefire12319374431593505169tmp surefire_018254635060611531759tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\UNI\2023-1\tingeso\evaluacion1\TINGESO-2023-1-Evaluaci-n-1\eval1\target\test-classes;D:\UNI\2023-1\tingeso\evaluacion1\TINGESO-2023-1-Evaluaci-n-1\eval1\target\classes;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.0.5\spring-boot-starter-data-jpa-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.0.5\spring-boot-starter-aop-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-aop\6.0.7\spring-aop-6.0.7.jar;C:\Users\nicol\.m2\repository\org\aspectj\aspectjweaver\1.9.19\aspectjweaver-1.9.19.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.0.5\spring-boot-starter-jdbc-3.0.5.jar;C:\Users\nicol\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-jdbc\6.0.7\spring-jdbc-6.0.7.jar;C:\Users\nicol\.m2\repository\org\hibernate\orm\hibernate-core\6.1.7.Final\hibernate-core-6.1.7.Final.jar;C:\Users\nicol\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\nicol\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\nicol\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\nicol\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\nicol\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\nicol\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\nicol\.m2\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar;C:\Users\nicol\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\nicol\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\nicol\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\nicol\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\nicol\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\nicol\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.0\jakarta.inject-api-2.0.0.jar;C:\Users\nicol\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\nicol\.m2\repository\org\springframework\data\spring-data-jpa\3.0.4\spring-data-jpa-3.0.4.jar;C:\Users\nicol\.m2\repository\org\springframework\data\spring-data-commons\3.0.4\spring-data-commons-3.0.4.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-orm\6.0.7\spring-orm-6.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-context\6.0.7\spring-context-6.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-tx\6.0.7\spring-tx-6.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-beans\6.0.7\spring-beans-6.0.7.jar;C:\Users\nicol\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\nicol\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-aspects\6.0.7\spring-aspects-6.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\3.0.5\spring-boot-starter-thymeleaf-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter\3.0.5\spring-boot-starter-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot\3.0.5\spring-boot-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.0.5\spring-boot-autoconfigure-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.0.5\spring-boot-starter-logging-3.0.5.jar;C:\Users\nicol\.m2\repository\ch\qos\logback\logback-classic\1.4.6\logback-classic-1.4.6.jar;C:\Users\nicol\.m2\repository\ch\qos\logback\logback-core\1.4.6\logback-core-1.4.6.jar;C:\Users\nicol\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.19.0\log4j-to-slf4j-2.19.0.jar;C:\Users\nicol\.m2\repository\org\apache\logging\log4j\log4j-api\2.19.0\log4j-api-2.19.0.jar;C:\Users\nicol\.m2\repository\org\slf4j\jul-to-slf4j\2.0.7\jul-to-slf4j-2.0.7.jar;C:\Users\nicol\.m2\repository\org\yaml\snakeyaml\1.33\snakeyaml-1.33.jar;C:\Users\nicol\.m2\repository\org\thymeleaf\thymeleaf-spring6\3.1.1.RELEASE\thymeleaf-spring6-3.1.1.RELEASE.jar;C:\Users\nicol\.m2\repository\org\thymeleaf\thymeleaf\3.1.1.RELEASE\thymeleaf-3.1.1.RELEASE.jar;C:\Users\nicol\.m2\repository\org\attoparser\attoparser\2.0.6.RELEASE\attoparser-2.0.6.RELEASE.jar;C:\Users\nicol\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.0.5\spring-boot-starter-web-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.0.5\spring-boot-starter-json-3.0.5.jar;C:\Users\nicol\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\nicol\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.2\jackson-annotations-2.14.2.jar;C:\Users\nicol\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\nicol\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.14.2\jackson-datatype-jdk8-2.14.2.jar;C:\Users\nicol\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.14.2\jackson-datatype-jsr310-2.14.2.jar;C:\Users\nicol\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.14.2\jackson-module-parameter-names-2.14.2.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.0.5\spring-boot-starter-tomcat-3.0.5.jar;C:\Users\nicol\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.7\tomcat-embed-core-10.1.7.jar;C:\Users\nicol\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.7\tomcat-embed-el-10.1.7.jar;C:\Users\nicol\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.7\tomcat-embed-websocket-10.1.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-web\6.0.7\spring-web-6.0.7.jar;C:\Users\nicol\.m2\repository\io\micrometer\micrometer-observation\1.10.5\micrometer-observation-1.10.5.jar;C:\Users\nicol\.m2\repository\io\micrometer\micrometer-commons\1.10.5\micrometer-commons-1.10.5.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-webmvc\6.0.7\spring-webmvc-6.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-expression\6.0.7\spring-expression-6.0.7.jar;C:\Users\nicol\.m2\repository\org\postgresql\postgresql\42.5.4\postgresql-42.5.4.jar;C:\Users\nicol\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\nicol\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.0.5\spring-boot-starter-test-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-test\3.0.5\spring-boot-test-3.0.5.jar;C:\Users\nicol\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.0.5\spring-boot-test-autoconfigure-3.0.5.jar;C:\Users\nicol\.m2\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;C:\Users\nicol\.m2\repository\net\minidev\json-smart\2.4.10\json-smart-2.4.10.jar;C:\Users\nicol\.m2\repository\net\minidev\accessors-smart\2.4.9\accessors-smart-2.4.9.jar;C:\Users\nicol\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\nicol\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\nicol\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.1\jakarta.activation-api-2.1.1.jar;C:\Users\nicol\.m2\repository\org\assertj\assertj-core\3.23.1\assertj-core-3.23.1.jar;C:\Users\nicol\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\nicol\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\nicol\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\nicol\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\nicol\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\nicol\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\nicol\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\nicol\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\nicol\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\nicol\.m2\repository\org\mockito\mockito-core\4.8.1\mockito-core-4.8.1.jar;C:\Users\nicol\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.23\byte-buddy-agent-1.12.23.jar;C:\Users\nicol\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\nicol\.m2\repository\org\mockito\mockito-junit-jupiter\4.8.1\mockito-junit-jupiter-4.8.1.jar;C:\Users\nicol\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\nicol\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-core\6.0.7\spring-core-6.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-jcl\6.0.7\spring-jcl-6.0.7.jar;C:\Users\nicol\.m2\repository\org\springframework\spring-test\6.0.7\spring-test-6.0.7.jar;C:\Users\nicol\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\nicol\.m2\repository\org\sonarsource\scanner\maven\sonar-maven-plugin\3.9.1.2184\sonar-maven-plugin-3.9.1.2184.jar;C:\Users\nicol\.m2\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.4\plexus-sec-dispatcher-1.4.jar;C:\Users\nicol\.m2\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar;C:\Users\nicol\.m2\repository\org\codehaus\plexus\plexus-utils\3.2.1\plexus-utils-3.2.1.jar;C:\Users\nicol\.m2\repository\org\sonarsource\scanner\api\sonar-scanner-api\2.16.2.588\sonar-scanner-api-2.16.2.588.jar;C:\Users\nicol\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\nicol\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\nicol\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\nicol\AppData\Local\Temp\surefire4580421412810341432\surefirebooter6172682375580238677.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\nicol\AppData\Local\Temp\surefire7454977313762174448\surefirebooter17857426527290190713.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-86"/>
@@ -60,52 +60,52 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testTotalLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="1.141"/>
+  <testcase name="testTotalLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="1.158"/>
   <testcase name="testRetencion1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
   <testcase name="testPromedioLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="0.047"/>
   <testcase name="testQuincenaAnterior1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testQuincenaAnterior2" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
-  <testcase name="testQuincenaAnterior3" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testQuincenaAnterior2" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testQuincenaAnterior3" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
   <testcase name="testQuincenaAnterior4" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
   <testcase name="testQuincenaAnterior5" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testQuincenaAnterior6" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testVarGrasa1" classname="com.tingeso.eval1.PagosServiceTest" time="0.032"/>
-  <testcase name="testVarGrasa2" classname="com.tingeso.eval1.PagosServiceTest" time="0.156"/>
+  <testcase name="testQuincenaAnterior6" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
+  <testcase name="testVarGrasa1" classname="com.tingeso.eval1.PagosServiceTest" time="0.031"/>
+  <testcase name="testVarGrasa2" classname="com.tingeso.eval1.PagosServiceTest" time="0.047"/>
   <testcase name="testPagoXGrasa1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
   <testcase name="testPagoXGrasa2" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testPagoXGrasa3" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testVarLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
-  <testcase name="testVarLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0.032"/>
+  <testcase name="testPagoXGrasa3" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
+  <testcase name="testVarLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="0.032"/>
+  <testcase name="testVarLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0.046"/>
   <testcase name="testPagoXLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
-  <testcase name="testPagoXLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testPagoXLeche3" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
+  <testcase name="testPagoXLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
+  <testcase name="testPagoXLeche3" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
   <testcase name="testPagoXLeche4" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
   <testcase name="testCalcularVariacionNegativa1" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
-  <testcase name="testDiasEntrega1" classname="com.tingeso.eval1.PagosServiceTest" time="0.031"/>
-  <testcase name="testCalculoBonificacion1" classname="com.tingeso.eval1.PagosServiceTest" time="0.031"/>
-  <testcase name="testCalculoBonificacion2" classname="com.tingeso.eval1.PagosServiceTest" time="0.172"/>
-  <testcase name="testCalculoBonificacion3" classname="com.tingeso.eval1.PagosServiceTest" time="0.11"/>
-  <testcase name="testCalculoBonificacion4" classname="com.tingeso.eval1.PagosServiceTest" time="0.156"/>
+  <testcase name="testDiasEntrega1" classname="com.tingeso.eval1.PagosServiceTest" time="0.047"/>
+  <testcase name="testCalculoBonificacion1" classname="com.tingeso.eval1.PagosServiceTest" time="0.032"/>
+  <testcase name="testCalculoBonificacion2" classname="com.tingeso.eval1.PagosServiceTest" time="0.125"/>
+  <testcase name="testCalculoBonificacion3" classname="com.tingeso.eval1.PagosServiceTest" time="0.378"/>
+  <testcase name="testCalculoBonificacion4" classname="com.tingeso.eval1.PagosServiceTest" time="0.11"/>
   <testcase name="testDescuentos1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testguardarPagoDB1" classname="com.tingeso.eval1.PagosServiceTest" time="0.125"/>
+  <testcase name="testguardarPagoDB1" classname="com.tingeso.eval1.PagosServiceTest" time="0.172"/>
   <testcase name="testPagoFinal1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testDescuentoXGrasa1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testDescuentoXGrasa1" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
   <testcase name="testDescuentoXGrasa2" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testDescuentoXGrasa3" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testDescuentoXGrasa3" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
   <testcase name="testPagoAcopioLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testPagoAcopioLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testPagoAcopioLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
   <testcase name="testDescuentoXLeche1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testDescuentoXLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
+  <testcase name="testDescuentoXLeche2" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
   <testcase name="testDescuentoXLeche3" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testDescuentoXLeche4" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testDescuentoXST1" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
-  <testcase name="testDescuentoXST2" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testDescuentoXST3" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
-  <testcase name="testObtenerByProveedor1" classname="com.tingeso.eval1.PagosServiceTest" time="0.047"/>
-  <testcase name="testPagoXST1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testPagoXST2" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
+  <testcase name="testDescuentoXLeche4" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
+  <testcase name="testDescuentoXST1" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testDescuentoXST2" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
+  <testcase name="testDescuentoXST3" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testObtenerByProveedor1" classname="com.tingeso.eval1.PagosServiceTest" time="0.031"/>
+  <testcase name="testPagoXST1" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
+  <testcase name="testPagoXST2" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
   <testcase name="testPagoXST3" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
-  <testcase name="testPagoXST4" classname="com.tingeso.eval1.PagosServiceTest" time="0.016"/>
-  <testcase name="testVarSolidos1" classname="com.tingeso.eval1.PagosServiceTest" time="0.015"/>
-  <testcase name="testVarSolidos2" classname="com.tingeso.eval1.PagosServiceTest" time="0.047"/>
+  <testcase name="testPagoXST4" classname="com.tingeso.eval1.PagosServiceTest" time="0"/>
+  <testcase name="testVarSolidos1" classname="com.tingeso.eval1.PagosServiceTest" time="0.032"/>
+  <testcase name="testVarSolidos2" classname="com.tingeso.eval1.PagosServiceTest" time="0.048"/>
 </testsuite>
