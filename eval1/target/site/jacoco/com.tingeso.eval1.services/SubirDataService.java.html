@@ -56,7 +56,6 @@ import java.util.ArrayList;
     public void leerCsv(String direccion){
         String texto = &quot;&quot;;
         BufferedReader bf = null;
-        dataRepository.deleteAll();
         try{
             bf = new BufferedReader(new FileReader(direccion));
             String temp = &quot;&quot;;
@@ -87,26 +86,26 @@ import java.util.ArrayList;
     }
 
     public void guardarData(SubirDataEntity data){
-<span class="fc" id="L90">        dataRepository.save(data);</span>
-<span class="fc" id="L91">    }</span>
+<span class="fc" id="L89">        dataRepository.save(data);</span>
+<span class="fc" id="L90">    }</span>
 
     public void guardarDataDB(String fecha, String turno, String proveedor, String kls_leche){
-<span class="fc" id="L94">         SubirDataEntity newData = new SubirDataEntity();</span>
-<span class="fc" id="L95">         newData.setFecha(fecha);</span>
-<span class="fc" id="L96">         newData.setTurno(turno);</span>
-<span class="fc" id="L97">         newData.setProveedor(proveedor);</span>
-<span class="fc" id="L98">         newData.setKls_leche(kls_leche);</span>
-<span class="fc" id="L99">         String[] dateSplit = fecha.split(&quot;/&quot;);</span>
-<span class="pc bpc" id="L100" title="1 of 2 branches missed.">         if(Integer.parseInt(dateSplit[2]) &gt; 15){</span>
-<span class="fc" id="L101">             newData.setQuincena(dateSplit[0] + &quot;/&quot; + dateSplit[1] + &quot;/&quot; + &quot;2&quot;);</span>
+<span class="fc" id="L93">         SubirDataEntity newData = new SubirDataEntity();</span>
+<span class="fc" id="L94">         newData.setFecha(fecha);</span>
+<span class="fc" id="L95">         newData.setTurno(turno);</span>
+<span class="fc" id="L96">         newData.setProveedor(proveedor);</span>
+<span class="fc" id="L97">         newData.setKls_leche(kls_leche);</span>
+<span class="fc" id="L98">         String[] dateSplit = fecha.split(&quot;/&quot;);</span>
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">         if(Integer.parseInt(dateSplit[2]) &gt; 15){</span>
+<span class="fc" id="L100">             newData.setQuincena(dateSplit[0] + &quot;/&quot; + dateSplit[1] + &quot;/&quot; + &quot;2&quot;);</span>
          }
          else{
-<span class="nc" id="L104">             newData.setQuincena(dateSplit[0] + &quot;/&quot; + dateSplit[1] + &quot;/&quot; + &quot;1&quot;);</span>
+<span class="nc" id="L103">             newData.setQuincena(dateSplit[0] + &quot;/&quot; + dateSplit[1] + &quot;/&quot; + &quot;1&quot;);</span>
          }
-<span class="fc" id="L106">         guardarData(newData);</span>
-<span class="fc" id="L107">    }</span>
+<span class="fc" id="L105">         guardarData(newData);</span>
+<span class="fc" id="L106">    }</span>
     public void eliminarData(){
-<span class="fc" id="L109">        dataRepository.deleteAll();</span>
-<span class="fc" id="L110">    }</span>
+<span class="fc" id="L108">        dataRepository.deleteAll();</span>
+<span class="fc" id="L109">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

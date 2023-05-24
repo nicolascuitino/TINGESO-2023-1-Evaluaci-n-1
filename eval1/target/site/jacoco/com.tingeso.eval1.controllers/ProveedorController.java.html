@@ -30,6 +30,13 @@ import java.util.List;
 <span class="nc" id="L30">        return &quot;new-proveedor&quot;;</span>
     }
 
+    @GetMapping(&quot;/proveedor/delete/{id}&quot;)
+    public String deleteProveedor(@PathVariable String id){
+<span class="nc" id="L35">        System.out.println(&quot;\n &quot; + id);</span>
+<span class="nc" id="L36">        proveedorService.eliminarProveedor(id);</span>
+<span class="nc" id="L37">        return &quot;redirect:/&quot;;</span>
+    }
+
     /*@PostMapping(&quot;/new-proveedor&quot;)
     public String saveProveedor(@RequestBody ProveedorEntity proveedor){
         proveedorService.guardarProveedor(proveedor);
@@ -40,20 +47,20 @@ import java.util.List;
                                  @RequestParam(&quot;nombre&quot;) String nombre,
                                  @RequestParam(&quot;categoria&quot;) String categoria,
                                  @RequestParam(&quot;retencion&quot;) String retencion){
-<span class="nc" id="L43">        proveedorService.guardarProveedorArg(codigo, nombre, categoria, retencion);</span>
-<span class="nc" id="L44">        return &quot;redirect:/listar&quot;;</span>
+<span class="nc" id="L50">        proveedorService.guardarProveedorArg(codigo, nombre, categoria, retencion);</span>
+<span class="nc" id="L51">        return &quot;redirect:/listar&quot;;</span>
     }
 
     @PostMapping(&quot;/proveedores/post&quot;)
     public String crearProveedor(@RequestBody ProveedorEntity proveedor){
 
-<span class="nc" id="L50">        proveedorService.guardarProveedor(proveedor);</span>
-<span class="nc" id="L51">        return &quot;Proveedor creado&quot;;</span>
+<span class="nc" id="L57">        proveedorService.guardarProveedor(proveedor);</span>
+<span class="nc" id="L58">        return &quot;Proveedor creado&quot;;</span>
     }
 
     @GetMapping(&quot;/getall&quot;)
     public List&lt;ProveedorEntity&gt; getAll(){
-<span class="nc" id="L56">        return proveedorService.obtenerProveedores();</span>
+<span class="nc" id="L63">        return proveedorService.obtenerProveedores();</span>
     }
 
 }

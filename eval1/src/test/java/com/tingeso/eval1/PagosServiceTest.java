@@ -635,6 +635,16 @@ public class PagosServiceTest {
     }
 
     @Test
+    void testQuincenaAnterior5() {
+        assertNotNull(pagosService.quincenaAnterior("2024/11/1"));
+    }
+
+    @Test
+    void testQuincenaAnterior6() {
+        assertNotNull(pagosService.quincenaAnterior("2024/11/2"));
+    }
+
+    @Test
     void testQuincenaAnterior4() {
         assertNull(pagosService.quincenaAnterior(""));
     }

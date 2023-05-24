@@ -305,36 +305,42 @@ import java.util.ArrayList;
 <span class="fc bfc" id="L305" title="All 2 branches covered.">        if(!quincena.isEmpty()){</span>
 <span class="fc" id="L306">            String[] quincenaSplit = quincena.split(&quot;/&quot;);</span>
 <span class="fc bfc" id="L307" title="All 2 branches covered.">            if(Integer.parseInt(quincenaSplit[2]) == 2){</span>
-<span class="fc" id="L308">                return quincenaSplit[0] + &quot;/&quot; +quincenaSplit[1] + &quot;/&quot; + &quot;1&quot;;</span>
+<span class="fc bfc" id="L308" title="All 2 branches covered.">                if(Integer.parseInt(quincenaSplit[1]) &lt; 10){</span>
+<span class="fc" id="L309">                    return quincenaSplit[0] + &quot;/&quot;+quincenaSplit[1] + &quot;/&quot; + &quot;1&quot;;</span>
+                }
+<span class="fc" id="L311">                return quincenaSplit[0] + &quot;/&quot; +quincenaSplit[1] + &quot;/&quot; + &quot;1&quot;;</span>
             }
             else{
-<span class="fc bfc" id="L311" title="All 2 branches covered.">                if(Integer.parseInt(quincenaSplit[1]) == 1){</span>
-<span class="fc" id="L312">                    Integer anio = Integer.parseInt(quincenaSplit[0]);</span>
-<span class="fc" id="L313">                    anio = anio - 1;</span>
-<span class="fc" id="L314">                    return Integer.toString(anio) + &quot;/&quot; + &quot;12&quot; + &quot;/&quot; + &quot;2&quot;;</span>
+<span class="fc bfc" id="L314" title="All 2 branches covered.">                if(Integer.parseInt(quincenaSplit[1]) == 1){</span>
+<span class="fc" id="L315">                    Integer anio = Integer.parseInt(quincenaSplit[0]);</span>
+<span class="fc" id="L316">                    anio = anio - 1;</span>
+<span class="fc" id="L317">                    return Integer.toString(anio) + &quot;/&quot; + &quot;12&quot; + &quot;/&quot; + &quot;2&quot;;</span>
                 }
                 else{
-<span class="fc" id="L317">                    Integer mes = Integer.parseInt(quincenaSplit[1]);</span>
-<span class="fc" id="L318">                    mes = mes - 1;</span>
-<span class="fc" id="L319">                    return quincenaSplit[0] + &quot;/&quot; + Integer.toString(mes) + &quot;/&quot; + &quot;2&quot;;</span>
+<span class="fc" id="L320">                    Integer mes = Integer.parseInt(quincenaSplit[1]);</span>
+<span class="fc" id="L321">                    mes = mes - 1;</span>
+<span class="fc bfc" id="L322" title="All 2 branches covered.">                    if(mes &lt; 10){</span>
+<span class="fc" id="L323">                        return quincenaSplit[0] + &quot;/0&quot; + Integer.toString(mes) + &quot;/&quot; + &quot;2&quot;;</span>
+                    }
+<span class="fc" id="L325">                    return quincenaSplit[0] + &quot;/&quot; + Integer.toString(mes) + &quot;/&quot; + &quot;2&quot;;</span>
                 }
             }
         }
         else{
-<span class="fc" id="L324">            return null;</span>
+<span class="fc" id="L330">            return null;</span>
         }
     }
 
     public String calcularVariacionNegativa(String actual, String anterior){
-<span class="fc" id="L329">        double valActual = Double.parseDouble(actual);</span>
-<span class="fc" id="L330">        double valAnterior = Double.parseDouble(anterior);</span>
-<span class="fc" id="L331">        double calc = ((valActual - valAnterior) / valAnterior) * 100;</span>
-<span class="fc bfc" id="L332" title="All 2 branches covered.">        if(calc &lt; 0){</span>
-<span class="fc" id="L333">            calc = calc * -1;</span>
-<span class="fc" id="L334">            return Integer.toString((int) calc);</span>
+<span class="fc" id="L335">        double valActual = Double.parseDouble(actual);</span>
+<span class="fc" id="L336">        double valAnterior = Double.parseDouble(anterior);</span>
+<span class="fc" id="L337">        double calc = ((valActual - valAnterior) / valAnterior) * 100;</span>
+<span class="fc bfc" id="L338" title="All 2 branches covered.">        if(calc &lt; 0){</span>
+<span class="fc" id="L339">            calc = calc * -1;</span>
+<span class="fc" id="L340">            return Integer.toString((int) calc);</span>
         }
         else{
-<span class="fc" id="L337">            return &quot;0&quot;;</span>
+<span class="fc" id="L343">            return &quot;0&quot;;</span>
         }
     }
 

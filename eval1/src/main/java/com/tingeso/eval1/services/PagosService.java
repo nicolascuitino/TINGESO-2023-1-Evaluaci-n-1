@@ -314,9 +314,6 @@ public class PagosService {
                 if(Integer.parseInt(quincenaSplit[1]) == 1){
                     Integer anio = Integer.parseInt(quincenaSplit[0]);
                     anio = anio - 1;
-                    if(Integer.parseInt(quincenaSplit[1]) < 10){
-                        return quincenaSplit[0] + "/" +quincenaSplit[1] + "/" + "2";
-                    }
                     return Integer.toString(anio) + "/" + "12" + "/" + "2";
                 }
                 else{

@@ -30,11 +30,11 @@ import java.util.Optional;
 <span class="fc" id="L30">        proveedorRepository.save(proveedor);</span>
 <span class="fc" id="L31">    }</span>
 
-    public Optional&lt;ProveedorEntity&gt; obtenerPorCodigo(Integer codigo){
+    public Optional&lt;ProveedorEntity&gt; obtenerPorCodigo(String codigo){
 <span class="nc" id="L34">        return proveedorRepository.findById(codigo);</span>
     }
 
-    public boolean eliminarProveedor(Integer codigo) {
+    public boolean eliminarProveedor(String codigo) {
         try{
 <span class="nc" id="L39">            proveedorRepository.deleteById(codigo);</span>
 <span class="nc" id="L40">            return true;</span>
