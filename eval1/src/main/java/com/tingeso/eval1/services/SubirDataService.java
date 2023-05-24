@@ -56,7 +56,6 @@ public class SubirDataService {
     public void leerCsv(String direccion){
         String texto = "";
         BufferedReader bf = null;
-        dataRepository.deleteAll();
         try{
             bf = new BufferedReader(new FileReader(direccion));
             String temp = "";

@@ -305,17 +305,26 @@ public class PagosService {
         if(!quincena.isEmpty()){
             String[] quincenaSplit = quincena.split("/");
             if(Integer.parseInt(quincenaSplit[2]) == 2){
+                if(Integer.parseInt(quincenaSplit[1]) < 10){
+                    return quincenaSplit[0] + "/"+quincenaSplit[1] + "/" + "1";
+                }
                 return quincenaSplit[0] + "/" +quincenaSplit[1] + "/" + "1";
             }
             else{
                 if(Integer.parseInt(quincenaSplit[1]) == 1){
                     Integer anio = Integer.parseInt(quincenaSplit[0]);
                     anio = anio - 1;
+                    if(Integer.parseInt(quincenaSplit[1]) < 10){
+                        return quincenaSplit[0] + "/" +quincenaSplit[1] + "/" + "2";
+                    }
                     return Integer.toString(anio) + "/" + "12" + "/" + "2";
                 }
                 else{
                     Integer mes = Integer.parseInt(quincenaSplit[1]);
                     mes = mes - 1;
+                    if(mes < 10){
+                        return quincenaSplit[0] + "/0" + Integer.toString(mes) + "/" + "2";
+                    }
                     return quincenaSplit[0] + "/" + Integer.toString(mes) + "/" + "2";
                 }
             }
